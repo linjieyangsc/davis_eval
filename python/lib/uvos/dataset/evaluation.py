@@ -51,7 +51,7 @@ def db_eval_sequence(segmentations,annotations,measure='J',n_jobs=cfg.N_JOBS):
   for r in range(len(results['raw'])):
     results['raw'][r] = [float(v) for v in results['raw'][r]]
 
-  results['raw'] = [[np.nan]+r+[np.nan] for r in results['raw']]
+  results['raw'] = [[np.nan]+r for r in results['raw']]
 
   return results
 
